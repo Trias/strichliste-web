@@ -6,8 +6,9 @@ module.exports.install = function(app) {
         $scope.createUser = function() {
 
             var name = $scope.name.replace(NON_PRINTABLE_UNICODE_CHARACTERS, '');
+            var pin = $scope.pin.replace(NON_PRINTABLE_UNICODE_CHARACTERS, '');
             userService
-                .createUser(name)
+                .createUser(name, pin)
                 .success(function() {
                     locationService.gotoHome();
                 })

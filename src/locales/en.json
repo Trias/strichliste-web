@@ -10,6 +10,7 @@
     "createUserTitle": "Create new user",
     "createUserSubmitLabel": "Create user",
     "createUserInputPlaceholder": "your username",
+    "createUserPinInputPlaceholder": "your pin",
     "createUserExists": "User „{{name}}” already exists",
     "back": "back",
     "cancel": "Cancel",

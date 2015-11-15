@@ -14,8 +14,15 @@ module.exports.install = function(app) {
 
     app.controller('IndexController', function ($scope, locationService, userService) {
 
-        $scope.userClick = function(user_id) {
-            locationService.gotoUser(user_id);
+        $scope.userClick = function(user_id, user_pin) {
+            if(user_pin){
+                var confirm = window.prompt("bitte gib deinen pin an", "");
+                if(confirm===user_pin){
+                    locationService.gotoUser(user_id);
+                }
+            }else {
+                locationService.gotoUser(user_id);
+            }
         };
 
         $scope.createUserClick = function() {

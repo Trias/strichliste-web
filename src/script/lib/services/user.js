@@ -13,8 +13,8 @@ function UserService($http) {
         return $http.get(settings.server + '/user/' + user_id);
     };
 
-    this.createUser = function(name) {
-        return $http.post(settings.server + '/user', {name: name});
+    this.createUser = function(name, pin) {
+        return $http.post(settings.server + '/user', {name: name, pin: pin});
     };
 }
 
